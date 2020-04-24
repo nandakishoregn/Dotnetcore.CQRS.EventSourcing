@@ -6,7 +6,6 @@ namespace Dotnetcore.CQRS.EventSourcing.Training
 {
     public class ChangeAgeCommand : DAPCommand
     {
-        public object Target { get ; set ; }
         public object ValueChanged { get; set; }
         public int Age { get; set; }
         public ChangeAgeCommand(object _target,object _valuetobechanged)

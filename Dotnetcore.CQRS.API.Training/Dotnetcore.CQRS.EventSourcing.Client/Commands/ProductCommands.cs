@@ -16,13 +16,38 @@ namespace Dotnetcore.CQRS.EventSourcing.Client.Commands
 
         public override void Execute_DAPCommand()
         {
-            var oName = nameof(Name);
-            var oRuntimeObject = Target.GetType().GetProperty(oName).GetValue(Target);
-            this.GetType().GetProperty(oName).SetValue(this, oRuntimeObject);
-            if (Name != null)
-            {
+            
+        }
+    }
 
-            }
+    public class ChangeProductQtyCommand : DAPCommand
+    {
+        public ChangeProductQtyCommand()
+        {
+
+        }
+
+        public int Qty { get; set; }
+
+        public override void Execute_DAPCommand()
+        {
+
+        }
+    }
+
+    public class ChangeProductQtyNameCommand : DAPCommand
+    {
+        public ChangeProductQtyNameCommand()
+        {
+
+        }
+
+        public int Qty { get; set; }
+        public String Name { get; set; }
+
+        public override void Execute_DAPCommand()
+        {
+
         }
     }
 }

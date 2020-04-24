@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace Dotnetcore.CQRS.EventSourcing.Training
 {
-    public abstract class DAPCommand : EventArgs, IDAPCommand
+    public abstract class DAPCommand : EventArgs
     {
+        
         public object Target { get; set; }
         public abstract void Execute_DAPCommand();
        
@@ -13,5 +15,6 @@ namespace Dotnetcore.CQRS.EventSourcing.Training
     {
         Object Target { get; set; }
         void Execute_DAPCommand();
+        
     }
 }

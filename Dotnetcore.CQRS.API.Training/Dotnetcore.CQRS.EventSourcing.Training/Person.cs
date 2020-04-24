@@ -31,7 +31,7 @@ namespace Dotnetcore.CQRS.EventSourcing.Training
             var cAC = e as ChangeAgeCommand;
             if (cAC != null && cAC.Target == this)
             {
-                eventBroker.Events.Add(new AgeChangedEvent<Person>(this, _age, cAC.Age));
+                //eventBroker.Events.Add(new AgeChangedEvent<Person>(this, _age, cAC.Age));
                 _age = cAC.Age;
             }
         }
